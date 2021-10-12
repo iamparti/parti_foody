@@ -40,7 +40,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
          <h3><?php echo num(city_id,city_list,$conn);?></h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Citys</h4>
+        <h4>Cities</h4>
       </div>
     </div></a>
     
@@ -65,7 +65,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
          <h3><?php echo num(id,product_category,$conn);?></h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Categorys</h4>
+        <h4>Categories</h4>
       </div>
     </div>
       
@@ -95,7 +95,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h3><?php echo num(restaurants_id,restaurants,$conn);?></h3>
         </div>
         <div class="w3-clear"></div>
-        <h4>Restaurants</h4>
+        <h4>Resturants</h4>
       </div>
     </div></a>
     
