@@ -22,7 +22,7 @@
                                             <a class="nav-link" href="about.php">About</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="restaurant.php">Restaurant</a>
+                                            <a class="nav-link" href="restaurant.php">Resturant</a>
                                         </li>
                                         <?php  
                                         
@@ -45,7 +45,7 @@ $gotusercount=mysqli_fetch_array($got);
                                        </style>
                                        
                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.php">Conact</a>
+                                            <a class="nav-link" href="contact.php">Contact</a>
                                         </li>
                                     </ul>
                                 </div> <!-- navbar collapse -->
