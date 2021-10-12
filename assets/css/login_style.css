@@ -1,0 +1,292 @@
+/*Resetting the form*/
+html, form, a, body, div, input, label, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: #EC407A;
+}
+
+/*Setting Defaults*/
+body {
+  font-family: Roboto, san-serif;
+  font-size: 16px;
+  color: #444;
+}
+
+.logo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.logo div {
+  max-width: 360px;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 5px;
+}
+.logo span {
+  display: block;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #f9f9f9;
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 0 0 4px 4px;
+  border-top: 0;
+}
+.logo span:before {
+  content: "Focus On the input";
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+.title h1 {
+  font-weight: normal;
+  line-height: 0;
+  font-size: 44px;
+  color: #E91E63;
+}
+.title p {
+  color: #666;
+  line-height: 1;
+}
+
+.title, form {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 360px;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 60px 0;
+  min-height: 400px;
+}
+
+div.input {
+  margin-bottom: 15px;
+}
+div.input label {
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.input label span {
+  line-height: 50px;
+}
+div.input input {
+  height: 50px;
+  float: right;
+  width: 70%;
+  border: 1px solid #666;
+}
+
+div.others div.forgot-password {
+  display: block;
+  margin: 15px 5%;
+  font-size: 15px;
+}
+div.others div.forgot-password a {
+  text-decoration: underline;
+}
+
+div.input.activated label {
+  display: block;
+  height: 0;
+  line-height: 60px;
+  color: #666;
+  overflow: visible;
+}
+div.input.activated label span {
+  position: relative;
+  bottom: 0;
+  display: inline-block;
+  margin: 0 5px;
+  transition: all 1s;
+  padding: 0 10px;
+}
+div.input.activated input {
+  float: none;
+  display: block;
+  margin: 0;
+  padding: 0 15px;
+  width: 100%;
+  height: 60px;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+div.input.activated input:-webkit-autofill {
+  /*Tiny Hack*/
+  box-shadow: inset 0 0 1000px 100px #fff;
+}
+div.input.activated.active label span, div.input.activated.passive label span {
+  bottom: 30px;
+  font-size: 12px;
+  line-height: 10px;
+  background-color: #fff;
+  color: #E91E63;
+}
+
+button {
+  margin: 20px 5% 0 auto;
+  display: block;
+  width: 120px;
+  height: 50px;
+  border: 0;
+  background-color: #eee;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 5px;
+}
+button span {
+  background-color: #E91E63;
+  color: #fff;
+  display: block;
+  height: 100%;
+  line-height: 40px;
+  border-radius: 20px;
+}
+
+/*Our Cool Borders*/
+.activated .borders {
+  height: 0;
+  position: relative;
+}
+.activated .borders .top, .activated .borders .left, .activated .borders .right, .activated .borders .bottom {
+  float: none;
+  height: 0;
+}
+.activated .borders .top .content, .activated .borders .left .content, .activated .borders .right .content, .activated .borders .bottom .content {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+.activated .borders .top .content .bdr, .activated .borders .left .content .bdr, .activated .borders .right .content .bdr, .activated .borders .bottom .content .bdr {
+  height: 100%;
+  width: 0;
+  background-color: #E91E63;
+  transition: width 1s, height 1s;
+}
+.activated .borders .left, .activated .borders .right {
+  width: 1px;
+}
+.activated .borders .left .content, .activated .borders .right .content {
+  height: 60px;
+  width: 1px;
+}
+.activated .borders .left .content .bdr, .activated .borders .right .content .bdr {
+  height: 0;
+  width: 100%;
+  transition-delay: 1s;
+}
+.activated .borders .right {
+  margin: 0 0 0 auto;
+}
+.activated .borders .left .content {
+  display: flex;
+}
+.activated .borders .left .content .bdr {
+  margin-top: auto;
+}
+.activated .borders .bottom {
+  position: relative;
+  top: 59px;
+}
+.activated .borders .bottom .content > .bdr {
+  margin: 0 0 0 auto;
+}
+
+.active > .borders .top .content .bdr, .active > .borders .left .content .bdr, .active > .borders .right .content .bdr, .active > .borders .bottom .content .bdr, .passive > .borders .top .content .bdr, .passive > .borders .left .content .bdr, .passive > .borders .right .content .bdr, .passive > .borders .bottom .content .bdr {
+  width: 100%;
+  height: 100%;
+}
+
+.sign-up-bar {
+  margin: 20px 0 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+}
+.sign-up-bar a {
+  display: block;
+}
+.sign-up-bar span {
+  color: #777;
+}
+@media screen and (min-height: 600px) {
+  .sign-up-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fafafa;
+  }
+}
+
+.check-element {
+  margin: 15px 5%;
+  font-size: 15px;
+}
+.check-element input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.check-element .check-box {
+  display: block;
+  width: 100px;
+  height: 0;
+}
+.check-element label {
+  display: block;
+  margin: 0 0 0 80px;
+  line-height: 30px;
+}
+.check-element.activated input[type=checkbox] {
+  display: none;
+}
+.check-element.activated .checker {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 5px;
+  cusror: pointer;
+}
+.check-element.activated .checker .checker-block {
+  margin: 0 0 0 0;
+  height: 20px;
+  width: 20px;
+  background-color: #E91E63;
+  border-radius: 50%;
+  opacity: 0.4;
+  transition: all 1s;
+}
+.check-element.active .checker .checker-block {
+  margin: 0 0 0 auto;
+  opacity: 1;
+}
